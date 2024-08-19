@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const tableController = require('../controllers/tableController');
+const authenticateToken = require('../middleware/authMiddleware');
 
-router.get('/GetAllTables', tableController.GetTables);
-router.get('/GetTableById/:id', tableController.GetTableById);
-router.post('/AddTable', tableController.CreateTable);
-router.put('/UpdateTableById/:id', tableController.UpdateTableById);
-router.delete('/DeleteTableById/:id', tableController.DeleteTableById);
+router.get('/GetAllTables', authenticateToken, tableController.GetTables);
+router.get('/GetTableById/:id', authenticateToken, tableController.GetTableById);
+router.post('/AddTable', authenticateToken, tableController.CreateTable);
+router.put('/UpdateTableById/:id', authenticateToken, tableController.UpdateTableById);
+router.delete('/DeleteTableById/:id', authenticateToken, tableController.DeleteTableById);
 
 module.exports = router;

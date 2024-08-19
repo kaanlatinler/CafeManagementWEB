@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/db');
 
-const TableStatus = sequelize.define('TableStatus', {
+const TableStatus = sequelize.define('tablestatus', {
   status_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

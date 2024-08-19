@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/db');
 
-const Position = sequelize.define('Position', {
+const Position = sequelize.define('positions', {
   position_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

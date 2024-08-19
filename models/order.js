@@ -4,7 +4,7 @@ const sequelize = require('../utils/db');
 const Table = require('./table');
 const User = require('./user');
 
-const Order = sequelize.define('Order', {
+const Order = sequelize.define('orders', {
   order_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

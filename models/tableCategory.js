@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/db');
 
-const TableCategory = sequelize.define('TableCategory', {
+const TableCategory = sequelize.define('tablecategory', {
   category_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

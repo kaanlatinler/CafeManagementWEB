@@ -4,7 +4,7 @@ const sequelize = require('../utils/db');
 const Business = require('./business.js');
 const Position = require('./position');
 
-const User = sequelize.define('User', {
+const User = sequelize.define('users', {
   user_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,

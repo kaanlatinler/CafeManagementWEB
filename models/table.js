@@ -5,7 +5,7 @@ const Business = require('./business.js');
 const TableCategory = require('./tableCategory');
 const TableStatus = require('./tableStatus');
 
-const Table = sequelize.define('Table', {
+const Table = sequelize.define('tables', {
   table_id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
